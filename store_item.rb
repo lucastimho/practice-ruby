@@ -7,9 +7,9 @@ class Menu
   attr_writer :name, :quantity, :price
 
   def initialize input
-   @name = input (name)
-   @quantity = input (quantity)
-   @price = input (price) 
+   @name = input (:name)
+   @quantity = input (:quantity)
+   @price = input (:price) 
   end
 
   def print_info
@@ -17,9 +17,9 @@ class Menu
   end
 end
 
-item_1 = Menu.new("fried chicken", 6, 7.99)
-item_2 = Menu.new("dumplings", 8, 6.99)
-item_3 = Menu.new("mozzarella sticks", 12, 7.99)
+item_1 = Menu.new(name: "fried chicken", quantitiy: 6, price: 7.99)
+item_2 = Menu.new(name: "dumplings", quantity: 8, price: 6.99)
+item_3 = Menu.new(name: "mozzarella sticks", quantity: 12, price: 7.99)
 item_2.name = "fried dumplings"
 item_1.print_info
 item_2.print_info
