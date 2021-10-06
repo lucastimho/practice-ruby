@@ -1,15 +1,15 @@
-item1 = [{:name => "fried chicken", :quantity => 6 , :price => 7.99}]
-item2= [{:name => "dumplings", :quantity => 8 , :price => 6.99}]
-item3= [{name: "mozzarella", quantity: 12, price: 7.99}]
+#item1 = [{:name => "fried chicken", :quantity => 6 , :price => 7.99}]
+#item2= [{:name => "dumplings", :quantity => 8 , :price => 6.99}]
+#item3= [{name: "mozzarella", quantity: 12, price: 7.99}]
 
 class Menu
   attr_reader :name, :quantity, :price
   attr_writer :name, :quantity, :price
 
-  def initialize input
-   @name = input (:name)
-   @quantity = input (:quantity)
-   @price = input (:price) 
+  def initialize (text)
+   @name = text[:name]
+   @quantity = text[:quantity]
+   @price = text[:price] 
   end
 
   def print_info
