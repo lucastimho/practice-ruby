@@ -16,7 +16,7 @@ end
 class Food < Menu
   def initialize (text)
     super
-    @shelf_life = text[shelf_life]
+    @shelf_life = text[:shelf_life]
   end
 
 item_1 = Menu.new(name: "fried chicken", quantitiy: 6, price: 7.99)
