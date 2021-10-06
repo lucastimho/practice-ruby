@@ -13,6 +13,12 @@ class Menu
   end
 end
 
+class Food < Menu
+  def initialize (text)
+    super
+    @shelf_life = text[shelf_life]
+  end
+
 item_1 = Menu.new(name: "fried chicken", quantitiy: 6, price: 7.99)
 item_2 = Menu.new(name: "dumplings", quantity: 8, price: 6.99)
 item_3 = Menu.new(name: "mozzarella sticks", quantity: 12, price: 7.99)
