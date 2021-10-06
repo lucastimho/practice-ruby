@@ -26,3 +26,8 @@ class Bike < Car
     puts "Ring ring!"
   end
 end
+
+car1 = Car.new
+bike1 = Bike.new
+car1.honk_horn
+bike1.ring_bell
