@@ -6,10 +6,10 @@ class Menu
   attr_reader :name, :quantity, :price
   attr_writer :name, :quantity, :price
 
-  def initialize(name, quantity, price)
-   @name = name
-   @quantity = quantity
-   @price = price 
+  def initialize input
+   @name = input (name)
+   @quantity = input (quantity)
+   @price = input (price) 
   end
 
   def print_info
