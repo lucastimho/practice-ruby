@@ -36,10 +36,14 @@ class Manager < Employee
   end
 
   def give_all_raises
-    index = 0
-    while index < manager.employees.length
-      manager.employees[index].give_annual_raise
-      index = index + 1
+    @employee.each do |employee|
+      employee.give_annual_raise
+    end
+  end
+
+  def fire_all_employees
+    @employee.each do |employee|
+      employee.active = false 
     end
   end
 end
@@ -48,5 +52,6 @@ manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000
 manager.print_info
 manager.send_report
 manager.give_all_raises
+manager.fire_all_employees
 employee1.print_info
 employee2.print_info
