@@ -1,4 +1,11 @@
+module Ratings
+  def signature_dish
+    puts "Our signature dish includes"
+    puts @name
+end
+
 class Menu
+  include Ratings
   attr_reader :name, :quantity, :price
   attr_writer :name, :quantity, :price
 
@@ -14,6 +21,7 @@ class Menu
 end
 
 class Food < Menu
+  include Ratings
   def initialize (text)
     super
     @shelf_life = text[:shelf_life]
@@ -26,3 +34,6 @@ item_2.name = "fried dumplings"
 item_1.print_info
 item_2.print_info
 item_3.print_info
+item_1.signature_dish
+item_2.signature_dish
+item_3.signature_dish
