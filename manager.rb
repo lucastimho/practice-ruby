@@ -36,13 +36,13 @@ class Manager < Employee
   end
 
   def give_all_raises
-    @employee.each do |employee|
+    @employees.each do |employee|
       employee.give_annual_raise
     end
   end
 
   def fire_all_employees
-    @employee.each do |employee|
+    @employees.each do |employee|
       employee.active = false 
     end
   end
@@ -55,3 +55,5 @@ manager.give_all_raises
 manager.fire_all_employees
 employee1.print_info
 employee2.print_info
+p employee1.active
+p employee2.active
